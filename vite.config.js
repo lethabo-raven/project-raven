@@ -9,6 +9,7 @@ export default defineConfig({
     vue(),
   ],
   base: "/Raven-2.0/",
+  publicPath: process.env.NODE_ENV === "production" ? "/Raven-2.0/" : "/",
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
